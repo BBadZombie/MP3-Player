@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=UserPrompt
+comment0.text=\r\n\ The\ main\ objective\ of\ this\ class\ is\ to\ prompt\ a\ user\ for\ a\ download\ directory\r\n\ and\ a\ URL\ to\ download\ from.\ \r\n\ \r\n\ This\ class\ will\ contain\ methods\ that\ prompt\ a\ user\ into\ inputting\ information.\r\n\ \r\n\ Need\ to\ create\ a\ class\ for\ saving\ URLs\ and\ directories\ set\ by\ a\ user\r\n\ \r\n\ @author\ Anthony\ Lopez\r\n\ @version\ 5.3.23\r\n\ \r\n\ Notes\ 4.6.23\:\r\n\ \ -\ Replaced\ while\ loop\ that\ handeled\ yt-dlp\ output\ with\ do\ while\ loop\r\n\ \ -\ Replaced\ if\ statements\ that\ determined\ calledDirectory\ with\ switch\ \r\n\ \ \ \ statements\r\n\ \ \r\n\ \ -\ Added\ variable\ declarations\ and\ a\ constructor\ to\ reduce\ coupling\ between\ \r\n\ \ \ \ variables\ and\ methods\r\n\ \ -\ Condensed\ the\ two\ switch\ statements\ that\ determined\ directories\ and\ \r\n\ \ \ \ urls\ into\ a\ method\ that\ takes\ many\ paramaters\r\n\ \r\n\ Notes\ 5.3.23\:\r\n\ \ -\ Replaced\ all\ of\ the\ ints\ variables\ with\ shorts\ to\ save\ on\ space.\r\n\ \ \ \ -\ Im\ thinking\ about\ a\ system\ that\ changes\ the\ data\ type\ based\ on\ the\ \r\n\ \ \ \ \ \ amount\ of\ saved\ directories\ and\ URLs\r\n\ \ -\ Removed\ some\ import\ statements\ since\ I\ separated\ the\ parts\ of\ this\ class\ \r\n\ \ \ \ that\ deals\ with\ user\ interaction\r\n\ \ -\ Separating\ the\ friendlyDownloader()\ method\ into\ 2\ different\ methods\ \r\n\ \ \ \ that\ prompt\ the\ user\ for\ directory\ and\ url\ respectively\r\n\ \ -\ Removed\ setInputs()\ and\ switchStatement()\ method\ as\ they\ arent\ very\r\n\ \ \ \ Java-esque\r\n\ \ -\ Removed\ friendlyDownloader()\ for\ same\ reason\ as\ above\r\n\ \ -\ Considering\ saving\ directories\ and\ URLs\ using\ a\ HashMap.\ Possibly\ in\ this\r\n\ \ \ \ class\ but\ Id\ rather\ in\ a\ different\ one\r\n\ \ \ \ \r\n\ Notes\ for\ 5.5.23"\r\n\ \ -\ Changing\ the\ base\ structure\ of\ this\ class\ hopefully\ for\ the\ last\ time\r\n\ \ -\ Removed\ askForDirectory()\ and\ askForURL()\ methods\ in\ favor\ of\ a\ more\ \r\n\ \ \ \ flexible\ method\ that\ receives\ a\ parameter\ for\ a\ prompt.\ This\ allows\ the\r\n\ \ \ \ method\ to\ be\ adjusted\ to\ any\ scenario\ asking\ for\ user\ input\r\n\ \ \ \ \r\n\ FINISHED\ FOR\ NOW\r\n
+comment1.params=
+comment1.target=UserPrompt()
+comment1.text=\r\n\ Constructor\r\n\ \r\n\ 5.3.23\:\r\n\ \ -\ Removed\ all\ of\ my\ saved\ directories\ and\ URLs.\ Theyre\ saved\ in\ GitHub.\r\n
+comment2.params=prompt
+comment2.target=UserPrompt(java.lang.String)
+comment2.text=\r\n\ Constructor\ for\ testing\r\n\ \r\n\ 5.3.23\:\r\n\ \ -\ Removed\ all\ of\ my\ saved\ directories\ and\ URLs.\ Theyre\ saved\ in\ GitHub.\r\n
+comment3.params=prompt
+comment3.target=void\ askForInput(java.lang.String)
+comment3.text=\r\n\ Method\ to\ prompt\ user\ for\ directory\r\n
+comment4.params=
+comment4.target=java.lang.String\ returnInput()
+comment4.text=\r\n\ Method\ to\ return\ input\r\n
+numComments=5

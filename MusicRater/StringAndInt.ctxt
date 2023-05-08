@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=StringAndInt
+comment0.text=\r\n\ This\ class\ will\ act\ as\ a\ data\ type.\ Similar\ to\ others\ like\ String\ and\ int.\ \r\n\ \r\n\ The\ purpose\ of\ this\ data\ type\ is\ to\ store\ a\ String\ and\ int\ together;\ a\ key-value\ pair.\ \r\n\ Kind\ of\ like\ the\ two\ values\ stored\ together\ in\ a\ HashMap.\ However\ unlike\ the\ \r\n\ values\ stored\ in\ a\ HashMap,\ the\ only\ combination\ of\ data\ types\ that\ can\ be\r\n\ stored\ together\ are\ an\ int\ and\ a\ String.\r\n\ \r\n\ The\ String\ will\ be\ reffered\ to\ as\ the\ 'key'\r\n\ The\ int\ will\ be\ reffered\ to\ as\ the\ 'value'\r\n\r\n\ @author\ Anthony\ Lopez\r\n\ @version\ 5.3.23\r\n
+comment1.params=
+comment1.target=StringAndInt()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ duo\r\n
+numComments=2

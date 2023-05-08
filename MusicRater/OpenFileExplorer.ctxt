@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=OpenFileExplorer
+comment0.text=\r\n\ Trying\ to\ open\ different\ apps\r\n\r\n\ @author\ Anthony\ Lopez\r\n\ @version0\ 5.5.23\r\n
+comment1.params=
+comment1.target=OpenFileExplorer()
+comment1.text=\r\n\ Contstructor\ for\ class\ appOpener\r\n
+numComments=2

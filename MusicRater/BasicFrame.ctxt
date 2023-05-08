@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=BasicFrame
+comment0.text=\r\n\ Class\ for\ a\ basic\ JFrame\r\n\ \r\n\ A\ JFrame\ is\ typically\ used\ as\ the\ main\ window\ for\ an\ app.\ \r\n\ It\ comes\ with\ a\ title,\ borders\ and\ buttons\r\n\ It\ can\ contain\ Swing\ components\ such\ as\ buttons\ and\ labels.\r\n\r\n\ @author\ Anthony\ Lopez\r\n\ @version0\ 5.5.23\ \r\n
+comment1.params=
+comment1.target=BasicFrame()
+comment1.text=\r\n\ Constructor\r\n
+numComments=2
