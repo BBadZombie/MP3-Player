@@ -14,24 +14,48 @@ import javax.swing.JLabel;
 public class BasicFrame extends JFrame{
     private JFrame frameObject;
     private JLabel labelObject;
+    
+    private BasicPanel basicPanel;
 
     /**
-     * Constructor
+     * Constructor 
      */
     public BasicFrame(){
         super();
         // instantiate the frame object
         frameObject = new JFrame("Newt");
         // add a panel
-        frameObject.add(new BasicPanel());
+        basicPanel = new BasicPanel();
+        add(basicPanel);
         // pack everything in
-        frameObject.pack();
+        pack();
         //
 
         //
 
         // make it visible
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frameObject.setVisible(true);
+        setVisible(true);
+    }
+    
+    /**
+     * Constructor with caller to add JPanel
+     * This makes it much easier to work with the JPanel in the Main class
+     */
+    public BasicFrame(BasicPanel basicPanel){
+        super();
+        // instantiate the frame object
+        frameObject = new JFrame("Newt");
+        // add a panel
+        add(basicPanel);
+        // pack everything in
+        pack();
+        //
+
+        //
+
+        // make it visible
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
     }
 }

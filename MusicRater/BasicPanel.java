@@ -11,6 +11,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Component;
 
+//imports for file operations
+import java.io.File;
+import java.util.HashSet;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+
 /**
  * Class for a basic JPanel
  * 
@@ -23,16 +29,16 @@ import java.awt.Component;
  */
 public class BasicPanel extends JPanel
 {
-    private Dimension panelSize;
-    private Color backColor;
+    private static Dimension panelSize;
+    private static Color backColor;
 
-    private JLabel promptLabel;
-    private JLabel responseLabel;
-    
-    private JTextField inputField;
-    private JButton buttonObject;
-    private JTextArea textHolder;
-    private JScrollPane scrollObject;
+    private static JLabel promptLabel;
+    private static JLabel responseLabel;
+
+    private static JTextField inputField;
+    private static JButton buttonObject;
+    private static JTextArea textArea;
+    private static JScrollPane scrollObject;
 
     /**
      * Constructor for objects of class BasicPanel
@@ -41,52 +47,82 @@ public class BasicPanel extends JPanel
     {
         super();
 
-        panelSize = new Dimension(300, 500);
-        setPreferredSize(panelSize);
-
+        setPreferredSize(new Dimension(300, 500));
         setBackground(new Color(250,250, 200));
 
-        //Label to prompt user alongside a JTextField
-        promptLabel = new JLabel("Select a music folder.");
+        //Label to prompt user
+        promptLabel = new JLabel("Press to select a music folder:");
         add(promptLabel);
 
+        textArea = new JTextArea();
+        scrollObject = new JScrollPane(textArea);
+
+        
         buttonObject = new JButton(" ");
-        buttonObject.addActionListener(new ButtonListener1());
+        buttonObject.addActionListener(new ButtonListener0());
         add(buttonObject);
+
+        add(scrollObject);
     }
 
-    //private inner class
-    private class ButtonListener1 implements ActionListener{
+    //inner classes
+    private class ButtonListener0 implements ActionListener{
+        private static String savedDirectory;
+        private static String dialogTitle;
+        private static File folder;
+        private static HashSet<String> fileSet;
+
+        private static JFrame jFrame;
+        private static JFileChooser fileChooser;
+
+        /**
+         * Method to print the contents of the mainMusic folder
+         */
         @Override
         public void actionPerformed(ActionEvent event){
-            removeAll();
-            revalidate();
-            repaint();
-
-            responseLabel = new JLabel("File explorer opened.");
-            add(responseLabel);
+            userSelectDirectory();
+            folderPrinter();
         }
-    }
-    
-    private class ButtonListener2 implements ActionListener{
-        @Override
-        public void actionPerformed(ActionEvent event){
-            remove(promptLabel);
-            remove(buttonObject);
-            repaint();
 
-            responseLabel = new JLabel("File explorer opened.");
-            add(responseLabel);
+        /**
+         * Constructor for class DirectorySave
+         */
+        public static void userSelectDirectory(){
+            jFrame = new JFrame();
+            fileChooser = new JFileChooser();
+
+            dialogTitle = "Specify a file to save";
+            fileChooser.setDialogTitle(dialogTitle);   
+            fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+
+            int userSelection = fileChooser.showSaveDialog(jFrame);
+
+            if (userSelection == JFileChooser.APPROVE_OPTION) {
+                File fileToSave = fileChooser.getSelectedFile();
+                savedDirectory = fileToSave.getAbsolutePath();
+                System.out.println("Save as file: " + fileToSave.getAbsolutePath());
+            }else{
+                System.out.println("No file was saved");
+            }
         }
-    }
-    
-    /**
-     * Method to add any component to the JPanel
-     */
-    public void addComponent(JPanel panel, Component component){
-        panel.add(component);
-        panel.revalidate();
-        panel.repaint();
+
+        /**
+         * Method to print the contents of the mainMusic folder
+         */
+        public static void folderPrinter() {
+            folder = new File(savedDirectory);
+            fileSet = new HashSet<>();
+
+            //if the array isnt empty, print the contents
+            if (fileSet != null) {
+                for (String file : fileSet) {
+                    //System.out.println(file);
+                    textArea.append(file);
+                }
+            }else{
+                System.out.println("isnt empty");
+            }
+        }
     }
 }
 
