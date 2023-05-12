@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Component;
 
 /**
  * Class for a basic JPanel
@@ -46,38 +47,46 @@ public class BasicPanel extends JPanel
         setBackground(new Color(250,250, 200));
 
         //Label to prompt user alongside a JTextField
-        promptLabel = new JLabel("Press the button to open file explorer.");
+        promptLabel = new JLabel("Select a music folder.");
         add(promptLabel);
 
-        //add new JTextField
-        //inputField = new JTextField(20);
-        //add(inputField);
-        
-        textHolder = new JTextArea(10, 10);
-        scrollObject = new JScrollPane(textHolder);
-        add(scrollObject);
-
         buttonObject = new JButton(" ");
-        // buttonObject.addActionListener(new ButtonListener());
+        buttonObject.addActionListener(new ButtonListener1());
         add(buttonObject);
     }
 
     //private inner class
-    private class ButtonListener implements ActionListener{
+    private class ButtonListener1 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent event){
-            //String nameText = inputField.getText();
+            removeAll();
+            revalidate();
+            repaint();
+
+            responseLabel = new JLabel("File explorer opened.");
+            add(responseLabel);
+        }
+    }
+    
+    private class ButtonListener2 implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent event){
             remove(promptLabel);
-            //remove(inputField);
             remove(buttonObject);
             repaint();
 
             responseLabel = new JLabel("File explorer opened.");
             add(responseLabel);
-            //responseLabel.setText(nameText);
-
-            OpenFileExplorer OFE = new OpenFileExplorer();
         }
+    }
+    
+    /**
+     * Method to add any component to the JPanel
+     */
+    public void addComponent(JPanel panel, Component component){
+        panel.add(component);
+        panel.revalidate();
+        panel.repaint();
     }
 }
 

@@ -1,4 +1,5 @@
 import java.io.File;
+import javax.swing.JFileChooser;
 
 /**
  * Write a description of class ListStuff here.
@@ -28,7 +29,6 @@ public class FileOperations
         
         fileSelector.showSaveDialog(null);
     }
-    
     
     /**
      * Method to print the contents of the mainMusic folder

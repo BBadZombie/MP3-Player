@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Main
-comment0.text=\r\n\ Newt\ is\ a\ program\ that\ will\ be\ used\ for\ downloading\ and\ organizing\ music\r\n\ It\ will\ contain\ the\ following\ classes\:\r\n\ \ -\ UserPrompt.\ Class\ for\ prompting\ user.\ Will\ contain\ methods\ to\:\r\n\ \ \ \ -\ Prompt\ a\ user\ for\ desired\ information\ -\ askForInput()\r\n\ \ \ \ -\ Return\ user\ input\ -\ returnInput()\r\n\ \ \ \ \r\n\ \ -\ Downloader.\ Class\ for\ interacting\ with\ Windows\ CML\ and\ yt-dlp.\ Will\ contain\ methods\ to\:\r\n\ \ \ \ -\ \r\n\r\n\ @author\ Anthony\ Lopez\r\n\ @version0\ 4.28.23\r\n
+comment0.text=\r\n\ Newt\ is\ a\ program\ that\ will\ be\ used\ for\ downloading\ and\ organizing\ music\r\n\ It\ will\ contain\ the\ following\ classes\:\r\n\ \ -\ UserPrompt.\ Class\ for\ prompting\ user.\ Will\ contain\ methods\ to\:\r\n\ \ \ \ -\ Prompt\ a\ user\ for\ desired\ information\ -\ askForInput()\r\n\ \ \ \ -\ Return\ user\ input\ -\ returnInput()\r\n\ \ \ \ \r\n\ \ -\ Downloader.\ Class\ for\ interacting\ with\ Windows\ CML\ and\ yt-dlp.\ Will\ contain\ methods\ to\:\r\n\ \ \ \ -\ \r\n\r\n\ @author\ Anthony\ Lopez\r\n\ @version0\ 4.28.23\r\n\ \r\n\ \r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment1.text=\r\n\ Main\ method\ of\ project\r\n

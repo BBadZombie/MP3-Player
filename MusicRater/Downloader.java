@@ -45,7 +45,7 @@ public class Downloader
             //class that interacts with Windows OS CLI (command line interface) to access yt-dlp 
             //arguments are then passed onto yt-dlp
             processBuilder = new ProcessBuilder("cmd.exe", "/c", "cd \"C:\\Users\\Anthony\\Music\\youtube-dl\" && yt-dlp -x --audio-format mp3 --audio-quality 0 " 
-                + directory 
+                + "-o " + directory + "/%(title)s.%(ext)s "
                 + url);
 
             //starts processBuilder and assigns it to new Process object

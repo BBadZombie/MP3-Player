@@ -11,16 +11,34 @@
  *
  * @author Anthony Lopez
  * @version0 4.28.23
+ * 
+ * 
  */
 public class Main
 {
-    private static UserPrompt userPrompt;
+    static UserPrompt userPrompt;
+    static Downloader downloader;
     
+    static String urlPrompt = "Input URL from which to download it from";
+    static String directoryPrompt = "Input directory to download to";
     
     /**
      * Main method of project
      */
     public static void main(String[] args){
+        //prompting user for info, saving it
         userPrompt = new UserPrompt();
+        
+        userPrompt.askForInput(urlPrompt);
+        String url = userPrompt.returnInput();
+        
+        userPrompt.askForInput(directoryPrompt);
+        String directory = userPrompt.returnInput();
+        
+        //downloading based off user input
+        downloader = new Downloader();
+        
+        downloader.dlpInteract(directory, url);
+        
     }
 }

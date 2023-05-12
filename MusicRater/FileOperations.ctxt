@@ -2,6 +2,12 @@
 comment0.target=FileOperations
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ ListStuff\ here.\r\n\r\n\ @author\ Anthony\ Lopez\r\n\ @version\ 2.12.23\r\n
 comment1.params=
-comment1.target=void\ folderPrinter()
-comment1.text=\r\n\ Method\ to\ print\ the\ contents\ of\ the\ mainMusic\ folder\r\n
-numComments=2
+comment1.target=FileOperations()
+comment1.text=\r\n\ Constructor\ for\ class\ FileOperations\r\n
+comment2.params=
+comment2.target=void\ folderSelect()
+comment2.text=\r\n\ Method\ to\ select\ folder\ and\ save\ its\ directory\r\n
+comment3.params=
+comment3.target=void\ folderPrinter()
+comment3.text=\r\n\ Method\ to\ print\ the\ contents\ of\ the\ mainMusic\ folder\r\n
+numComments=4
